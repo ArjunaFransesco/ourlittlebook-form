@@ -47,7 +47,16 @@ for (const section of sections) {
 }
 
 function values() {
-  return Object.fromEntries(new FormData(form));
+  return { ...Object.fromEntries(new FormData(form)), rush: form.elements.rush.checked ? 'yes' : 'no', recolor: form.elements.recolor.checked ? 'yes' : 'no' };
+}
+
+function updateOptions() {
+  const recolor = form.elements.recolor.checked;
+  document.getElementById('recolor-field').hidden = !recolor;
+  form.elements['recolor-note'].disabled = !recolor;
+  form.elements['recolor-note'].required = recolor;
+  const fee = (form.elements.rush.checked ? 4000 : 0) + (recolor ? 2000 : 0);
+  document.getElementById('option-total').textContent = `Biaya tambahan: Rp${fee.toLocaleString('id-ID')}`;
 }
 
 function updateSections() {
@@ -66,14 +75,19 @@ try {
   if (saved && typeof saved === 'object') {
     for (const [key, value] of Object.entries(saved)) {
       const input = form.elements.namedItem(key);
-      if (input && typeof value === 'string') input.value = value;
+      if (input && typeof value === 'string') {
+        if (input.type === 'checkbox') input.checked = value === 'yes';
+        else input.value = value;
+      }
     }
   }
 } catch { /* The form remains usable when browser storage is unavailable. */ }
 updateSections();
+updateOptions();
 
 form.addEventListener('input', () => {
   updateSections();
+  updateOptions();
   document.getElementById('handoff').hidden = true;
   clearTimeout(saveTimer);
   saveTimer = setTimeout(() => {
@@ -113,6 +127,7 @@ document.getElementById('clear-button').addEventListener('click', () => {
   form.reset();
   try { localStorage.removeItem(storageKey); } catch { /* No stored draft to remove. */ }
   updateSections();
+  updateOptions();
   document.getElementById('save-status').textContent = 'Draft dikosongkan.';
   document.getElementById('handoff').hidden = true;
 });

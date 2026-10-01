@@ -21,9 +21,7 @@
   </header>
   <main class="layout">
     <aside class="intro">
-      <p class="eyebrow">dibuat untuk orang favoritmu</p>
       <h1>Your little<br><em>book.</em></h1>
-      <p class="intro-copy">Satu buku kecil untuk orang favoritmu. Isi nama dan tulisan yang mau kamu pakai, lalu kirim pesanan ke Telegram.</p>
       <a class="mini-book" href="https://ourlittlebook.liltz.my.id/" target="_blank" rel="noopener noreferrer" aria-label="Buka contoh buku">
         <span class="mini-frame">
           <span class="mini-top">a book for your favorite person</span>
@@ -32,7 +30,6 @@
           <span class="mini-bottom">made with love</span>
         </span>
       </a>
-      <p class="intro-note">Isi bagian yang ingin kamu ubah. Bagian kosong mengikuti contoh, dengan nama dan tanggal yang disesuaikan.</p>
     </aside>
     <section class="paper" aria-labelledby="form-title">
       <div class="paper-heading">
@@ -58,6 +55,21 @@
             <div class="field"><label for="occasion">Momen yang dirayakan</label><input id="occasion" name="occasion" maxlength="100" placeholder="Contoh: Boyfriend Day"></div>
             <div class="field"><label for="date">Tanggal pada buku</label><input id="date" name="date" maxlength="60" placeholder="Contoh: October 3"></div>
           </div>
+        </section>
+        <section class="basics options" aria-labelledby="options-title">
+          <h3 id="options-title">Pilihan tambahan</h3>
+          <label class="option-row"><input id="rush" name="rush" type="checkbox" value="yes"><span>Deadline under 24 hours <strong>+Rp4.000</strong></span></label>
+          <label class="option-row"><input id="recolor" name="recolor" type="checkbox" value="yes"><span>Recolor <strong>+Rp2.000</strong></span></label>
+          <div class="field" id="recolor-field" hidden><label for="recolor-note">Warna yang kamu mau <span aria-hidden="true">*</span></label><textarea id="recolor-note" name="recolor-note" rows="2" maxlength="400" placeholder="Contoh: cover biru navy, halaman cream, background abu gelap." disabled></textarea></div>
+          <p class="option-total" id="option-total" aria-live="polite">Biaya tambahan: Rp0</p>
+        </section>
+        <section class="basics" aria-labelledby="links-title">
+          <h3 id="links-title">Link website</h3>
+          <div class="field-grid">
+            <div class="field"><label for="link-one">Pilihan link 1 <span aria-hidden="true">*</span></label><div class="link-input"><input id="link-one" name="link-one" maxlength="63" pattern="[a-z0-9]+(-[a-z0-9]+)*" autocapitalize="none" spellcheck="false" placeholder="ourlittlebook" title="Gunakan huruf kecil, angka, atau tanda hubung. Tanpa spasi." required><span>.liltz.my.id</span></div></div>
+            <div class="field"><label for="link-two">Pilihan link 2 <span aria-hidden="true">*</span></label><div class="link-input"><input id="link-two" name="link-two" maxlength="63" pattern="[a-z0-9]+(-[a-z0-9]+)*" autocapitalize="none" spellcheck="false" placeholder="alittlebookforus" title="Gunakan huruf kecil, angka, atau tanda hubung. Tanpa spasi." required><span>.liltz.my.id</span></div></div>
+          </div>
+          <p class="field-hint">Tulis dua pilihan untuk berjaga-jaga kalau link pertama sudah dipakai. Gunakan huruf kecil, angka, atau tanda hubung tanpa spasi.</p>
         </section>
         <div class="section-heading"><h3>Kata-kata di bukumu</h3><span id="change-count">Belum ada perubahan teks</span></div>
         <div id="book-sections"></div>

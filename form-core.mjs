@@ -69,6 +69,17 @@ export function buildMessage(values) {
     if (read(key)) lines.push(`${label}: ${read(key)}`);
   }
   lines.push('', 'Bagian yang tidak diisi mengikuti contoh. Nama dan tanggal disesuaikan dengan detail di atas.');
+  const rush = read('rush') === 'yes';
+  const recolor = read('recolor') === 'yes';
+  const extra = (rush ? 4000 : 0) + (recolor ? 2000 : 0);
+  lines.push('', 'PILIHAN TAMBAHAN', `Deadline under 24 hours: ${rush ? 'Ya (+Rp4.000)' : 'Tidak'}`, `Recolor: ${recolor ? 'Ya (+Rp2.000)' : 'Tidak'}`);
+  if (recolor && read('recolor-note')) lines.push(`Warna yang diminta: ${read('recolor-note')}`);
+  lines.push(`Biaya tambahan: Rp${extra.toLocaleString('id-ID')}`);
+  const links = [['link-one', 'Pilihan link 1'], ['link-two', 'Pilihan link 2']].filter(([key]) => read(key));
+  if (links.length) {
+    lines.push('', 'LINK WEBSITE');
+    for (const [key, label] of links) lines.push(`${label}: https://${read(key)}.liltz.my.id`);
+  }
   for (const section of sections) {
     const filled = section.fields.filter(([key]) => read(`${section.id}-${key}`));
     if (!filled.length) continue;
