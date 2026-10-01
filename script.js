@@ -145,7 +145,7 @@ form.addEventListener('submit', (event) => {
     link.href = telegramURL(payload);
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.textContent = payloads.length > 1 ? `Buka pesan ${index + 1} dari ${payloads.length}` : 'Buka chat @xlimaw lagi';
+    link.textContent = payloads.length > 1 ? `Buka pesan ${index + 1} dari ${payloads.length}` : 'Buka chat @huurns lagi';
     links.append(link);
   }
   document.getElementById('handoff-note').textContent = chunks.length > 1

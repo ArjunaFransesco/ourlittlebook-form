@@ -122,5 +122,5 @@ export function splitMessage(message, maxChars = 3500, maxEncoded = 6500) {
 }
 
 export function telegramURL(text) {
-  return `https://t.me/xlimaw?text=${encodeURIComponent(text)}`;
+  return `https://t.me/huurns?text=${encodeURIComponent(text)}`;
 }
