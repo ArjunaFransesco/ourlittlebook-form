@@ -1,10 +1,10 @@
-# Our little book form
+# Birthday book form
 
-Static personalization form for Liltz's [Our Little Book](https://ourlittlebook.liltz.my.id/).
+Static personalization form for Liltz's [Birthday Book](https://birthdaybook.liltz.my.id/).
 
 The form prepares an editable Telegram draft for **@huurns** using `https://t.me/huurns?text=...`. The customer presses Send inside Telegram. Photos, MP3 files, and music cover images are attached in that chat. No responses are sent to GitHub or stored on a server. Drafts are saved in the customer's browser and can be cleared from the form.
 
-All optional fields are blank. Their placeholders show the original book wording. The message contains only completed fields plus instructions for the attachments. Long orders are divided into numbered Telegram drafts without losing text. A copy button and message preview provide a fallback if a Telegram client does not fill the draft.
+All optional fields are blank. Their placeholders show the birthday book wording. The message contains only completed fields plus instructions for the attachments. Long orders are divided into numbered Telegram drafts without losing text. A copy button and message preview provide a fallback if a Telegram client does not fill the draft.
 
 ## Hosting
 

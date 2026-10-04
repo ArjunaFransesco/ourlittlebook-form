@@ -1,67 +1,288 @@
 export const sections = [
-  { id: 'front', title: 'Cover depan', fields: [
-    ['top', 'Teks kecil atas', 'for amane, my favorite person'],
-    ['title', 'Judul utama', "you're my\nfavorite.", 'heading'],
-    ['date', 'Teks bawah pertama', 'october 3'],
-    ['sign', 'Teks bawah kedua', 'made with love by cattia'],
-  ] },
-  { id: 'page1', title: 'Halaman 01', subtitle: 'Pembuka', fields: [
-    ['top', 'Teks kecil atas', 'october 3 is all about you'],
-    ['title', 'Judul', 'happy\nboyfriend\nday!', 'heading'],
-    ['body', 'Paragraf pembuka', 'i made this because loving you makes me ridiculously happy. okay, open it. i have so much to say.', 'paragraph'],
-  ] },
-  { id: 'page2', title: 'Halaman 02', subtitle: 'Foto 1', fields: [
-    ['top', 'Teks kecil atas', 'first, can we talk about this photo'],
-    ['title', 'Judul', 'look at\nyou!', 'heading'],
-    ['caption', 'Kalimat di bawah foto', 'the loose tie, that face, your hand on the jacket. i smiled the second i saw it.', 'paragraph'],
-  ] },
-  { id: 'page3', title: 'Halaman 03', subtitle: 'Foto 2', fields: [
-    ['top', 'Teks kecil atas', 'and i love this one too'],
-    ['caption', 'Kalimat di bawah foto', 'you make me smile so much.', 'paragraph'],
-  ] },
-  { id: 'page4', title: 'Halaman 04', subtitle: 'Hal yang disukai', fields: [
-    ['top', 'Teks kecil atas', 'a few things i adore'],
-    ['title', 'Judul', 'the little\nthings.', 'heading'],
-    ['item1-title', 'Poin pertama: judul', 'that grin'],
-    ['item1-body', 'Poin pertama: isi', "you look like you're about to laugh, and now i'm smiling too.", 'paragraph'],
-    ['item2-title', 'Poin kedua: judul', 'your little looks'],
-    ['item2-body', 'Poin kedua: isi', "yes, even when you're just looking away. so cute.", 'paragraph'],
-    ['item3-title', 'Poin ketiga: judul', 'all of you'],
-    ['item3-body', 'Poin ketiga: isi', "the messy tie, the white tee, every little thing. i love it all.", 'paragraph'],
-  ] },
-  { id: 'page5', title: 'Halaman 05', subtitle: 'Kutipan besar', fields: [
-    ['top', 'Teks kecil atas', 'okay, one more thing'],
-    ['quote', 'Kutipan', 'i get so excited when your name pops up. yes, every single time.', 'paragraph'],
-  ] },
-  { id: 'page6', title: 'Halaman 06', subtitle: 'Kolase foto 3 dan 4', fields: [
-    ['top', 'Teks kecil atas', "i couldn't pick just one"],
-    ['caption', 'Kalimat di bawah kolase', "i mean, look at you. i'm obsessed.", 'paragraph'],
-  ] },
-  { id: 'page7', title: 'Halaman 07', subtitle: 'Surat', fields: [
-    ['top', 'Teks kecil atas', 'a little note for your day'],
-    ['greeting', 'Sapaan', 'dear amane,'],
-    ['p1', 'Paragraf pertama', 'happy boyfriend day, amane!', 'paragraph'],
-    ['p2', 'Paragraf kedua', "it's october 3, and i'm so happy i get to celebrate you. i made this little book because one photo was never going to be enough.", 'paragraph'],
-    ['p3', 'Paragraf ketiga', 'your smile, your silly little looks, the way you make a regular day feel fun. i love all of it. i love you.', 'paragraph'],
-    ['p4', 'Paragraf keempat', 'i hope today makes you smile as much as you make me smile.', 'paragraph'],
-    ['sign', 'Tanda tangan', 'love,\ncattia.', 'heading'],
-  ] },
-  { id: 'page8', title: 'Halaman 08', subtitle: 'Penutup', fields: [
-    ['top', 'Teks kecil atas', 'one last thing'],
-    ['title', 'Judul besar', "you're\nmy\nfavorite.", 'heading'],
-    ['body', 'Kalimat penutup', "happy boyfriend day, amane. i can't wait to make more memories with you.", 'paragraph'],
-  ] },
-  { id: 'back', title: 'Cover belakang', fields: [
-    ['top', 'Teks kecil atas', 'october 3'],
-    ['initials', 'Inisial tengah', 'c · a'],
-    ['title', 'Judul tengah', 'what a\ngood day.', 'heading'],
-    ['body', 'Kalimat bawah', 'made for the person who makes me this happy.\ni love you, amane.', 'paragraph'],
-  ] },
+  {
+    "id": "front",
+    "title": "Cover depan",
+    "fields": [
+      [
+        "top",
+        "Teks kecil atas",
+        "for amane, my favorite person"
+      ],
+      [
+        "title",
+        "Judul utama",
+        "it's your\nbirthday.",
+        "heading"
+      ],
+      [
+        "date",
+        "Teks bawah pertama",
+        "birthday edition"
+      ],
+      [
+        "sign",
+        "Teks bawah kedua",
+        "made with love by cattia"
+      ]
+    ]
+  },
+  {
+    "id": "page1",
+    "title": "Halaman 01",
+    "subtitle": "Pembuka",
+    "fields": [
+      [
+        "top",
+        "Teks kecil atas",
+        "today is all about you"
+      ],
+      [
+        "title",
+        "Judul",
+        "happy\nbirthday!",
+        "heading"
+      ],
+      [
+        "body",
+        "Paragraf pembuka",
+        "i put a few of my favorite photos of you in here. a birthday card wasn't going to fit them all. go on, turn the page.",
+        "paragraph"
+      ]
+    ]
+  },
+  {
+    "id": "page2",
+    "title": "Halaman 02",
+    "subtitle": "Foto 1",
+    "fields": [
+      [
+        "top",
+        "Teks kecil atas",
+        "starting strong"
+      ],
+      [
+        "title",
+        "Judul",
+        "birthday\nboy.",
+        "heading"
+      ],
+      [
+        "caption",
+        "Kalimat di bawah foto",
+        "the suit, the loose tie, your grin. okay, you knew exactly what you were doing.",
+        "paragraph"
+      ]
+    ]
+  },
+  {
+    "id": "page3",
+    "title": "Halaman 03",
+    "subtitle": "Foto 2",
+    "fields": [
+      [
+        "top",
+        "Teks kecil atas",
+        "saving this one too"
+      ],
+      [
+        "caption",
+        "Kalimat di bawah foto",
+        "just a white tee and somehow i'm distracted.",
+        "paragraph"
+      ]
+    ]
+  },
+  {
+    "id": "page4",
+    "title": "Halaman 04",
+    "subtitle": "Hal yang disukai",
+    "fields": [
+      [
+        "top",
+        "Teks kecil atas",
+        "a few favorites"
+      ],
+      [
+        "title",
+        "Judul",
+        "my favorite\ndetails.",
+        "heading"
+      ],
+      [
+        "item1-title",
+        "Poin pertama: judul",
+        "your grin"
+      ],
+      [
+        "item1-body",
+        "Poin pertama: isi",
+        "that almost laughing face in the suit photo. gets me every time.",
+        "paragraph"
+      ],
+      [
+        "item2-title",
+        "Poin kedua: judul",
+        "the side glance"
+      ],
+      [
+        "item2-body",
+        "Poin kedua: isi",
+        "you're looking away in that white tee and i'm still looking at you.",
+        "paragraph"
+      ],
+      [
+        "item3-title",
+        "Poin ketiga: judul",
+        "the casual ones"
+      ],
+      [
+        "item3-body",
+        "Poin ketiga: isi",
+        "messy hair, a tee, no big deal. those are some of my favorites.",
+        "paragraph"
+      ]
+    ]
+  },
+  {
+    "id": "page5",
+    "title": "Halaman 05",
+    "subtitle": "Kutipan besar",
+    "fields": [
+      [
+        "top",
+        "Teks kecil atas",
+        "for the record"
+      ],
+      [
+        "quote",
+        "Kutipan",
+        "another year of you. yeah, that's worth celebrating.",
+        "paragraph"
+      ]
+    ]
+  },
+  {
+    "id": "page6",
+    "title": "Halaman 06",
+    "subtitle": "Kolase foto 3 dan 4",
+    "fields": [
+      [
+        "top",
+        "Teks kecil atas",
+        "two more for the birthday book"
+      ],
+      [
+        "caption",
+        "Kalimat di bawah kolase",
+        "the close up and the orange shirt. both made the cut.",
+        "paragraph"
+      ]
+    ]
+  },
+  {
+    "id": "page7",
+    "title": "Halaman 07",
+    "subtitle": "Surat",
+    "fields": [
+      [
+        "top",
+        "Teks kecil atas",
+        "your birthday note"
+      ],
+      [
+        "greeting",
+        "Sapaan",
+        "dear amane,"
+      ],
+      [
+        "p1",
+        "Paragraf pertama",
+        "happy birthday, amane!",
+        "paragraph"
+      ],
+      [
+        "p2",
+        "Paragraf kedua",
+        "i hope you get good food, a really good cake, and a day you don't have to rush through. you deserve to enjoy this one.",
+        "paragraph"
+      ],
+      [
+        "p3",
+        "Paragraf ketiga",
+        "i love having you in my life. the random messages, the silly photos, all of it. i'm really glad i get to celebrate another birthday with you.",
+        "paragraph"
+      ],
+      [
+        "p4",
+        "Paragraf keempat",
+        "here's to more photos, more things to laugh about, and more birthdays together. love you.",
+        "paragraph"
+      ],
+      [
+        "sign",
+        "Tanda tangan",
+        "love,\ncattia.",
+        "heading"
+      ]
+    ]
+  },
+  {
+    "id": "page8",
+    "title": "Halaman 08",
+    "subtitle": "Penutup",
+    "fields": [
+      [
+        "top",
+        "Teks kecil atas",
+        "before you go"
+      ],
+      [
+        "title",
+        "Judul besar",
+        "make a\nwish.",
+        "heading"
+      ],
+      [
+        "body",
+        "Kalimat penutup",
+        "happy birthday, amane. now go get your cake. i'll be here taking more photos of you.",
+        "paragraph"
+      ]
+    ]
+  },
+  {
+    "id": "back",
+    "title": "Cover belakang",
+    "fields": [
+      [
+        "top",
+        "Teks kecil atas",
+        "birthday edition"
+      ],
+      [
+        "initials",
+        "Inisial tengah",
+        "c · a"
+      ],
+      [
+        "title",
+        "Judul tengah",
+        "same time\nnext year?",
+        "heading"
+      ],
+      [
+        "body",
+        "Kalimat bawah",
+        "keep this one. we'll need a bigger book next year.\nlove you, amane.",
+        "paragraph"
+      ]
+    ]
+  }
 ];
 
 export function buildMessage(values) {
   const read = (key) => String(values[key] ?? '').trim();
-  const lines = ['OUR LITTLE BOOK', 'Form personalisasi buku', '', 'DETAIL BUKU'];
+  const lines = ['BIRTHDAY BOOK', 'Form personalisasi buku ulang tahun', '', 'DETAIL BUKU'];
   const customerFields = [['customer', 'Nama pemesan'], ['telegram', 'Username Telegram'], ['deadline', 'Deadline'], ['website-title', 'Judul tab website']];
   const customerLines = customerFields.filter(([key]) => read(key)).map(([key, label]) => `${label}: ${read(key)}`);
   if (customerLines.length) lines.splice(3, 0, 'DETAIL PEMESAN', ...customerLines, '');

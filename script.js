@@ -136,7 +136,7 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
   const message = buildMessage(values());
   const chunks = splitMessage(message);
-  const payloads = chunks.map((chunk, index) => chunks.length > 1 ? `OUR LITTLE BOOK · Pesan ${index + 1} dari ${chunks.length}\n\n${chunk}` : chunk);
+  const payloads = chunks.map((chunk, index) => chunks.length > 1 ? `BIRTHDAY BOOK · Pesan ${index + 1} dari ${chunks.length}\n\n${chunk}` : chunk);
   const links = document.getElementById('message-links');
   links.replaceChildren();
   for (const [index, payload] of payloads.entries()) {
